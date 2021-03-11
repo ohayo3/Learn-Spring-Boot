@@ -27,4 +27,7 @@ public class Pokemon {
 	
 	@ManyToOne
 	private PokemonType pokemonType;
+	
+	@ManyToOne
+	private PokemonType2 pokemonType2;
 }

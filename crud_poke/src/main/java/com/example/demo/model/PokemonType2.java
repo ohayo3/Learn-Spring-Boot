@@ -15,7 +15,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-public class PokemonType {
+public class PokemonType2 {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,7 +24,7 @@ public class PokemonType {
 	@NotBlank
 	private String typeName;
 
-	@OneToMany(mappedBy = "pokemonType")
+	@OneToMany(mappedBy = "pokemonType2")
 	private List<Pokemon> pokemons;
 
 }

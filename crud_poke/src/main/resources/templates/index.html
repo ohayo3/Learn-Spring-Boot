@@ -16,8 +16,8 @@
 
           <!-- DataTables -->
           <div class="card shadow my-4">
-            <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">
+            <div class="card-header py-3 bg-info">
+              <h6 class="m-0 font-weight-bold text-light">
                ポケモン一覧
               </h6>
             </div>
@@ -36,6 +36,7 @@
                       <th>ポケモン</th>
                       <th>特性</th>
                       <th>タイプ1</th>
+                      <th>タイプ2</th>
                       <th></th>
                     </tr>
                   </thead>
@@ -46,13 +47,14 @@
                       <td th:text="*{pokemonName}"></td>
                       <td th:text="*{ability}"></td>
                       <td th:text="*{pokemonType.typeName}"></td>
+                      <td th:text="*{pokemonType2.typeName}"></td>
                       <td>
                         <a th:href="@{/edit/{id}(id=*{id})}"
                           class="btn btn-primary btn-icon-split">
                           <span class="icon text-white-50">
-                            <i class="fas fa-trash"></i>
+                            <i class="fas fa-cog"></i>
                           </span>
-                          <span class="text">編集</span>
+                          <span class="text">Edit</span>
                         </a>
 
                         <a th:href="@{/delete/{id}(id=*{id})}"
@@ -60,7 +62,7 @@
                           <span class="icon text-white-50">
                             <i class="fas fa-trash"></i>
                           </span>
-                          <span class="text">削除</span>
+                          <span class="text">Delete</span>
                         </a>
                       </td>
                     </tr>
